@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Resolvr</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/faviconn.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="static/assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Valera
+  * Template URL: https://bootstrapmade.com/valera-free-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Resolvr</h1>
+      </a>
+
+  <nav id="navmenu" class="navmenu">
+  <ul>
+    <li><a href="#hero" class="active">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#services">Our Services</a></li>
+    <li><a href="#portfolio">Case Studies</a></li>
+    <li><a href="#team">Our Team</a></li>
+    <li><a href="#faq">FAQs</a></li>
+    <li class="dropdown"><a href="#"><span>Sign Up</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+      <ul>
+        <li><a href="#">Already have an account?</a></li>
+        <li><a href="{% url 'login' %}">Log In</a></li>
+
+      </ul>
+    </li>
+    <li><a href="#contact">Contact Us</a></li>
+  </ul>
+  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
+
+
+    </div>
+  </header>
+
+  <main class="main">
+
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+
+  <img src="static/assets/img/pexels.jpg" alt="Arbitration Background" data-aos="fade-in">
+
+  <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2>Welcome to Resolvr</h2>
+        <p>Your trusted partner in online arbitration. We simplify dispute resolution with a seamless, efficient platform.</p>
+        <a href="/starterpage/" class="btn-get-started">Start Resolving Disputes</a> <!-- Link updated to /signup/ -->
+      </div>
+    </div>
+  </div>
+
+</section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About Us</h2>
+        <p>Your trusted partner in efficient and fair online arbitration.</p>
+      </div><!-- End Section Title -->
+
+       <div class="container">
+
+        <div class="row gy-5">
+    
+          <div class="content col-xl-5 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
+            <h3>Empowering Dispute Resolution</h3>
+            <p>
+              At Resolvr, we are dedicated to providing a transparent and straightforward arbitration process. Our team of experts ensures that disputes are resolved efficiently, allowing you to focus on what matters most.
+            </p>
+            <a href="#" class="about-btn align-self-center align-self-xl-start"><span>Learn More About Us</span> <i class="bi bi-chevron-right"></i></a>
+          </div>
+
+          <div class="col-xl-7" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4">
+    
+              <div class="col-md-6 icon-box position-relative">
+                <i class="bi bi-briefcase"></i>
+                <h4><a href="" class="stretched-link">Expert Arbitrators</a></h4>
+                <p>Our team consists of experienced professionals who specialize in various fields of arbitration.</p>
+              </div><!-- Icon-Box -->
+    
+              <div class="col-md-6 icon-box position-relative">
+                <i class="bi bi-gem"></i>
+                <h4><a href="" class="stretched-link">Fair and Impartial</a></h4>
+                <p>We ensure that all parties receive a fair hearing and that decisions are made impartially.</p>
+              </div><!-- Icon-Box -->
+    
+              <div class="col-md-6 icon-box position-relative">
+                <i class="bi bi-broadcast"></i>
+                <h4><a href="" class="stretched-link">Streamlined Process</a></h4>
+                <p>Our platform simplifies the arbitration process, making it easy to submit cases and receive updates.</p>
+              </div><!-- Icon-Box -->
+    
+              <div class="col-md-6 icon-box position-relative">
+                <i class="bi bi-easel"></i>
+                <h4><a href="" class="stretched-link">Confidentiality Assured</a></h4>
+                <p>Your privacy is our priority. We ensure that all information shared during arbitration is kept confidential.</p>
+              </div><!-- Icon-Box -->
+    
+            </div>
+          </div>
+    
+        </div>
+    
+      </div>
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Clients</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Workers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+
+
+ <!-- Services Section -->
+<section id="services" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Services</h2>
+    <p>Providing comprehensive solutions for efficient and fair dispute resolution.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row g-5">
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item item-cyan position-relative">
+          <i class="bi bi-activity icon"></i>
+          <div>
+            <h3>Expert Arbitration</h3>
+            <p>Our skilled arbitrators ensure impartial and effective resolution of disputes, fostering a fair environment for all parties involved.</p>
+            <a href="{% url 'service_details' %}" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item item-orange position-relative">
+          <i class="bi bi-broadcast icon"></i>
+          <div>
+            <h3>Online Dispute Resolution</h3>
+            <p>Utilizing advanced technology, we offer seamless online dispute resolution services that are accessible and efficient.</p>
+            <a href="{% url 'service_details' %}" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item item-teal position-relative">
+          <i class="bi bi-easel icon"></i>
+          <div>
+            <h3>Confidential Mediation</h3>
+            <p>We provide confidential mediation services to help parties reach amicable agreements without resorting to litigation.</p>
+            <a href="{% url 'service_details' %}" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item item-red position-relative">
+          <i class="bi bi-bounding-box-circles icon"></i>
+          <div>
+            <h3>Comprehensive Legal Support</h3>
+            <p>Our platform provides comprehensive legal support throughout the arbitration process, ensuring you have guidance every step of the way.</p>
+            <a href="{% url 'service_details' %}" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item item-indigo position-relative">
+          <i class="bi bi-calendar4-week icon"></i>
+          <div>
+            <h3>Timely Resolution</h3>
+            <p>We prioritize timely resolutions to disputes, helping you save time and resources while achieving satisfactory outcomes.</p>
+            <a href="{% url 'service_details' %}" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item item-pink position-relative">
+          <i class="bi bi-chat-square-text icon"></i>
+          <div>
+            <h3>Personalized Consultation</h3>
+            <p>We offer personalized consultations to understand your unique situation and provide tailored solutions for your arbitration needs.</p>
+            <a href="{% url 'service_details' %}" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Services Section -->
+
+   <!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Testimonials</h2>
+    <p>What our clients say about our arbitration services</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          },
+          "breakpoints": {
+            "320": {
+              "slidesPerView": 1,
+              "spaceBetween": 40
+            },
+            "1200": {
+              "slidesPerView": 3,
+              "spaceBetween": 1
+            }
+          }
+        }
+      </script>
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              "Resolvr provided an exceptional arbitration experience. The process was smooth, and the arbitrators were highly professional and impartial."
+            </p>
+            <div class="profile mt-auto">
+              <img src="static/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <h3>Saul Goodman</h3>
+              <h4>CEO &amp; Founder</h4>
+            </div>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              "The online dispute resolution service is incredibly efficient. I was able to resolve my issues without ever leaving my office."
+            </p>
+            <div class="profile mt-auto">
+              <img src="static/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <h3>Sara Wilsson</h3>
+              <h4>Designer</h4>
+            </div>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              "I appreciated the confidentiality and professionalism during the mediation process. It helped us reach a fair agreement quickly."
+            </p>
+            <div class="profile mt-auto">
+              <img src="static/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <h3>Jena Karlis</h3>
+              <h4>Store Owner</h4>
+            </div>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              "The team at Resolvr guided us through every step of the arbitration process. Their support made all the difference in resolving our dispute."
+            </p>
+            <div class="profile mt-auto">
+              <img src="static/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+              <h3>Matt Brandon</h3>
+              <h4>Freelancer</h4>
+            </div>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              "I highly recommend Resolvr for anyone needing arbitration services. Their efficiency and professionalism exceeded my expectations."
+            </p>
+            <div class="profile mt-auto">
+              <img src="static/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+              <h3>John Larson</h3>
+              <h4>Entrepreneur</h4>
+            </div>
+          </div>
+        </div><!-- End testimonial item -->
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+</section><!-- /Testimonials Section -->
+
+   <!-- Call To Action Section -->
+<section id="call-to-action" class="call-to-action section dark-background">
+
+  <div class="container">
+    <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+      <div class="col-xl-10">
+        <div class="text-center">
+          <h3>Ready to Resolve Your Disputes?</h3>
+          <p>Experience efficient and fair arbitration services tailored to your needs. Let our expert team guide you through the resolution process with confidence and ease.</p>
+          <a class="cta-btn" href="#">Get Started Today</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section><!-- /Call To Action Section -->
+
+
+
+
+
+
+
+ <!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Case Studies</h2>
+    <p>Explore our successful arbitration cases that demonstrate our commitment to fair and effective dispute resolution.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+
+      </ul><!-- End Portfolio Filters -->
+
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-arbitration">
+          <div class="portfolio-content h-100">
+            <img src="static/assets/img/portfolio/arbitration-case-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Case Study: Arbitration Success</h4>
+              <p>A detailed overview of a successful arbitration case highlighting our approach and outcomes.</p>
+              <a href="static/assets/img/portfolio/arbitration-case-1.jpg" title="Case Study: Arbitration Success" data-gallery="portfolio-gallery-arbitration" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-arbitration">
+          <div class="portfolio-content h-100">
+            <img src="static/assets/img/portfolio/arbitration-case-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Arbitration Case Study 1</h4>
+              <p>A comprehensive overview of a successful arbitration case demonstrating our effective resolution strategies.</p>
+              <a href="static/assets/img/portfolio/arbitration-case-1.jpg" title="Arbitration Case Study 1" data-gallery="portfolio-gallery-arbitration" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mediation">
+          <div class="portfolio-content h-100">
+            <img src="static/assets/img/portfolio/mediation-case-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Mediation Case Study 1</h4>
+              <p>This case highlights our mediation process and how we helped parties reach a fair agreement.</p>
+              <a href="static/assets/img/portfolio/mediation-case-1.jpg" title="Mediation Case Study 1" data-gallery="portfolio-gallery-mediation" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-resources">
+          <div class="portfolio-content h-100">
+            <img src="static/assets/img/portfolio/resource-guide.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Resource Guide for Arbitration</h4>
+              <p>A valuable resource guide that outlines best practices and tips for navigating arbitration.</p>
+              <a href="static/assets/img/portfolio/resource-guide.jpg" title="Resource Guide for Arbitration" data-gallery="portfolio-gallery-resources" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <img src="static/assets/img/portfolio/arbitration-app.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Arbitration Management App</h4>
+              <p>An innovative app designed to streamline the arbitration process for users and arbitrators alike.</p>
+              <a href="static/assets/img/portfolio/arbitration-app.jpg" title="Arbitration Management App" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-arbitration">
+          <div class="portfolio-content h-100">
+            <img src="static/assets/img/portfolio/arbitration-case-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Arbitration Case Study 2</h4>
+              <p>Another successful arbitration case showcasing our commitment to fair resolutions.</p>
+              <a href="static/assets/img/portfolio/arbitration-case-2.jpg" title="Arbitration Case Study 2" data-gallery="portfolio-gallery-arbitration" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="static/assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/assets/img/portfolio/branding-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="static/assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="static/assets/img/portfolio/app-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/assets/img/portfolio/app-3.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="static/assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/assets/img/portfolio/product-3.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="static/assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/assets/img/portfolio/branding-3.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="static/assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/assets/img/portfolio/books-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+          </div><!-- End Portfolio Container -->
+ <!-- Button to Open Create Case Study Modal -->
+        <button class="btn btn-success" data-toggle="modal" data-target="#createCaseStudyModal">Add New Case Study</button>
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Team Section -->
+<section id="team" class="team section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Meet Our Team</h2>
+    <p>Dedicated professionals committed to providing exceptional arbitration services.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+        <div class="team-member">
+          <div class="member-img">
+            <img src="static/assets/img/team/team-1.jpg" class="img-fluid" alt="">
+            <div class="social">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Walter White</h4>
+            <span>Chief Arbitration Officer</span>
+          </div>
+        </div>
+      </div><!-- End Team Member -->
+
+      <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+        <div class="team-member">
+          <div class="member-img">
+            <img src="static/assets/img/team/team-2.jpg" class="img-fluid" alt="">
+            <div class="social">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Sarah Johnson</h4>
+            <span>Senior Mediator</span>
+          </div>
+        </div>
+      </div><!-- End Team Member -->
+
+      <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+        <div class="team-member">
+          <div class="member-img">
+            <img src="static/assets/img/team/team-3.jpg" class="img-fluid" alt="">
+            <div class="social">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>William Anderson</h4>
+            <span>Chief Technology Officer</span>
+          </div>
+        </div>
+      </div><!-- End Team Member -->
+
+      <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+        <div class="team-member">
+          <div class="member-img">
+            <img src="static/assets/img/team/team-4.jpg" class="img-fluid" alt="">
+            <div class="social">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Amanda Jepson</h4>
+            <span>Financial Analyst</span>
+          </div>
+        </div>
+      </div><!-- End Team Member -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Team Section -->
+
+ <!-- Pricing Section -->
+<section id="pricing" class="pricing section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Pricing</h2>
+    <p>Choose the plan that best fits your arbitration needs.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-3">
+
+      <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="pricing-item">
+          <h3>Basic</h3>
+          <h4><sup>KES</sup>0<span> / month</span></h4>
+          <ul>
+            <li>Access to basic resources</li>
+            <li>Email support</li>
+            <li>Online dispute submission</li>
+            <li class="na">Limited case tracking</li>
+            <li class="na">No legal consultation</li>
+          </ul>
+          <div class="btn-wrap">
+            <a href="#" class="btn-buy">Get Started</a>
+          </div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+      <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="pricing-item featured">
+          <h3>Standard</h3>
+          <h4><sup>KES</sup>2,660<span> / month</span></h4> <!-- Converted from $19 -->
+          <ul>
+            <li>All Basic features</li>
+            <li>Priority email support</li>
+            <li>Unlimited case submissions</li>
+            <li>Case tracking dashboard</li>
+            <li class="na">1-hour legal consultation</li>
+          </ul>
+          <div class="btn-wrap">
+            <a href="#" class="btn-buy">Get Started</a>
+          </div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+      <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="pricing-item">
+          <h3>Professional</h3>
+          <h4><sup>KES</sup>4,060<span> / month</span></h4> <!-- Converted from $29 -->
+          <ul>
+            <li>All Standard features</li>
+            <li>Dedicated account manager</li>
+            <li>Comprehensive case analysis</li>
+            <li>2-hour legal consultation</li>
+            <li class="na">Access to exclusive webinars</li>
+          </ul>
+          <div class="btn-wrap">
+            <a href="#" class="btn-buy">Get Started</a>
+          </div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+      <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="pricing-item">
+          <span class="advanced">Recommended</span>
+          <h3>Ultimate</h3>
+          <h4><sup>KES</sup>6,860<span> / month</span></h4> <!-- Converted from $49 -->
+          <ul>
+            <li>All Professional features</li>
+            <li>24/7 premium support</li>
+            <li>Unlimited legal consultations</li>
+            <li>Access to all resources and tools</li>
+            <li>No additional fees for arbitration cases</li>
+          </ul>
+          <div class="btn-wrap">
+            <a href="#" class="btn-buy">Get Started</a>
+          </div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Pricing Section -->
+   <!-- Faq Section -->
+<section id="faq" class="faq section light-background">
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="content px-xl-5">
+          <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+          <p>
+            Here are some common questions about our arbitration services. If you have more inquiries, feel free to reach out!
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="faq-container">
+          <div class="faq-item faq-active">
+            <h3><span class="num">1.</span> <span>What types of disputes can be resolved through arbitration?</span></h3>
+            <div class="faq-content">
+              <p>We handle a wide range of disputes, including commercial, contractual, and consumer-related issues. Our goal is to provide a fair resolution for all parties involved.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">2.</span> <span>How does the arbitration process work?</span></h3>
+            <div class="faq-content">
+              <p>The arbitration process typically involves submitting a request for arbitration, selecting an arbitrator, and then participating in hearings where both parties present their cases. The arbitrator then makes a binding decision.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">3.</span> <span>Is arbitration confidential?</span></h3>
+            <div class="faq-content">
+              <p>Yes, one of the key benefits of arbitration is confidentiality. The proceedings and any related documents are not made public, protecting the privacy of all parties involved.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">4.</span> <span>What are the costs associated with arbitration?</span></h3>
+            <div class="faq-content">
+              <p>The costs can vary based on the complexity of the case and the arbitrator's fees. We provide transparent pricing information upfront so you can make informed decisions.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span class="num">5.</span> <span>Can I appeal an arbitration decision?</span></h3>
+            <div class="faq-content">
+              <p>Generally, arbitration decisions are final and binding. However, there may be limited grounds for appeal under specific circumstances as defined by law or agreement.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /Faq Section -->
+
+
+
+ <section id="contact" class="contact section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <p>Get in touch with us for any inquiries regarding our arbitration services.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+      <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15954.137420458224!2d36.821946!3d-1.292065!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f12a8c3b8b4b5%3A0x6b7d9e5a8e4e7c6c!2sNairobi%20National%20Museum!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div><!-- End Google Maps -->
+
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+          <i class="bi bi-geo-alt flex-shrink-0"></i>
+          <div>
+            <h3>Address</h3>
+            <p>123 Arbitration Avenue, Nairobi, Kenya</p>
+          </div>
+        </div><!-- End Info Item -->
+
+        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+          <i class="bi bi-telephone flex-shrink-0"></i>
+          <div>
+            <h3>Call Us</h3>
+            <p>+254 700 123 456</p>
+          </div>
+        </div><!-- End Info Item -->
+      </div><!-- End Contact Details Column -->
+
+      <!-- Feedback Form Column -->
+      <div class="col-lg-8">
+        <form action="{% url 'contacts' %}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200" onsubmit="handleSubmit(event)">
+            {% csrf_token %}
+          <div class="row gy-4">
+
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            </div>
+
+            <div class="col-md-6">
+              <input type="text" name="phone" class="form-control" placeholder="Your Phone Number" required>
+            </div>
+
+            <div class="col-md-12">
+              <textarea class="form-control" name="message" rows="6" placeholder="Your Feedback/Message" required></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+
+              <button type="submit" class="btn btn-primary">Send Feedback</button>
+            </div>
+
+          </div>
+        </form>
+      </div><!-- End Feedback Form Column -->
+    </div><!-- End Row -->
+  </div><!-- End Container -->
+
+  <!-- Separate Email Section -->
+  <div class="container mt-4">
+    <h3>Email Us</h3>
+    <p>For any inquiries, you can reach us at:</p>
+    <p><strong>info@resolvr.co.ke</strong></p>
+  </div><!-- End Email Section -->
+
+</section><!-- End Contact Section -->
+
+<script>
+  function handleSubmit(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Here you can handle the form data as needed
+    const formData = new FormData(event.target);
+
+    // Display the success message
+    document.querySelector('.sent-message').style.display = 'block';
+
+    // Optionally, clear the form fields
+    event.target.reset();
+
+    // You can also add logic to send the data via an API if needed
+  }
+</script>
+
+<!-- Footer Section -->
+<footer id="footer" class="footer dark-background">
+  <div class="container">
+    <h3 class="sitename">Resolvr</h3>
+    <p>Your trusted partner in efficient and fair arbitration services. We are committed to providing expert support for all your dispute resolution needs.</p>
+    <div class="social-links d-flex justify-content-center">
+      <a href=""><i class="bi bi-twitter-x"></i></a>
+      <a href=""><i class="bi bi-facebook"></i></a>
+      <a href=""><i class="bi bi-instagram"></i></a>
+      <a href=""><i class="bi bi-skype"></i></a>
+      <a href=""><i class="bi bi-linkedin"></i></a>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        <span>Copyright</span> <strong class="px-1 sitename">Resolvr</strong> <span>All Rights Reserved</span>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">Musima</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/assets/vendor/php-email-form/validate.js"></script>
+<script src="static/assets/vendor/aos/aos.js"></script>
+<script src="static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="static/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+<!-- Main JS File -->
+<script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>

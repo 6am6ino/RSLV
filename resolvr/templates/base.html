@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Arbitration System{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            background-color: #f5f5f5; /* Light background */
+            font-family: 'Roboto', sans-serif;
+        }
+        .header {
+            background-color: #4B3D3D; /* Dark brown for header */
+            color: white;
+        }
+        .footer {
+            background-color: #4B3D3D; /* Dark brown for footer */
+            color: white;
+            padding: 10px 0;
+        }
+        .nav-link {
+            color: white; /* White text for nav links */
+        }
+        .nav-link:hover {
+            color: #D6CFC4; /* Light brown on hover */
+        }
+    </style>
+</head>
+<body>
+
+<header class="header d-flex align-items-center p-3">
+    <div class="container-fluid">
+        <h1 class="h4 mb-0">Arbitration System</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    {% if user.is_authenticated %}
+                        {% if user.is_mediator %}
+                            <li class="nav-item"><a href="{% url 'mediator_dashboard' %}" class="nav-link">Dashboard</a></li>
+                        {% else %}
+                            <li class="nav-item"><a href="{% url 'customer_dashboard' %}" class="nav-link">Dashboard</a></li>
+                        {% endif %}
+                        <li class="nav-item"><a href="{% url 'case_list' %}" class="nav-link">My Cases</a></li>
+                        <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">Logout</a></li>
+                    {% else %}
+                        <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Login</a></li>
+                        <li class="nav-item"><a href="{% url 'signup' %}" class="nav-link">Sign Up</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main role="main" class="flex-shrink-0">
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer class="footer text-center mt-5">
+    <div class="container">
+        <p>&copy; 2024 Arbitration System. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
+
+</body>
+</html>

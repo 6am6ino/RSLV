@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logged Out</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>You have been logged out</h1>
+        <p>Thank you for using our application. You have successfully logged out.</p>
+        <p><a href="{% url 'login' %}">Click here to log in again</a></p>
+    </div>
+
+    <!-- Optional: Add some JavaScript or additional styling -->
+    <script src="{% static 'js/scripts.js' %}"></script> <!-- Link to your JS file -->
+</body>
+</html>

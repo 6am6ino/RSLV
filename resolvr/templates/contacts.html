@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animation CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+    <style>
+        .loading, .error-message, .sent-message {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4">Contact Us</h2>
+
+    <div class="row justify-content-center">
+        <!-- Contact Form Section -->
+        <div class="col-lg-8">
+            <form action="{% url 'contacts' %}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <div class="row gy-4">
+
+                    <div class="col-md-6">
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                    </div>
+
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                    </div>
+
+                    <div class="col-md-12">
+                        <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                    </div>
+
+                    <div class="col-md-12 text-center">
+                        <div class='loading'>Loading...</div>
+                        <div class='error-message'></div>
+                        <div class='sent-message'>Your message has been sent. Thank you!</div>
+
+                        <button type='submit' class='btn btn-primary'>Send Message</button>
+                    </div>
+
+                </div>
+            </form>
+        </div><!-- End Contact Form -->
+    </div><!-- End Row -->
+</div><!-- End Container -->
+
+<!-- Bootstrap JS and dependencies -->
+<script src='https://code.jquery.com/jquery-3.5.1.slim.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
+<!-- AOS Animation JS -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js'></script>
+
+<script>
+  // Initialize AOS
+  AOS.init();
+</script>
+
+</body>
+</html>
+</body>
+</html>

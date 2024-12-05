@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Arbitration System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            background-color: #f5f5f5; /* Light background */
+        }
+        .header {
+            background-color: #4B3D3D; /* Dark brown for header */
+        }
+        .page-title {
+            background-color: #8B5A2B; /* Premium brown color for title */
+        }
+        .premium-container {
+            background-color: #D6CFC4; /* Light premium brown */
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary {
+            background-color: #6F4C3E; /* Darker brown for buttons */
+            border-color: #6F4C3E;
+        }
+        .btn-primary:hover {
+            background-color: #5B3B31; /* Slightly darker on hover */
+        }
+    </style>
+</head>
+<body>
+
+<header class="header d-flex align-items-center text-white fixed-top">
+    <div class="container-fluid">
+        <a href="#" class="logo d-flex align-items-center text-white text-decoration-none">
+            <h1 class="h4 mb-0">Valera</h1>
+        </a>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="main mt-5 pt-5">
+    <!-- Page Title -->
+    <div class="page-title text-white text-center py-5">
+        <h1>Online Arbitration System</h1>
+        <p>Welcome to our platform for resolving disputes efficiently.</p>
+    </div>
+
+    <!-- Get Started Section -->
+    <section id="get-started" class="py-5 premium-container">
+        <div class="container text-center">
+            <h2>Get Started</h2>
+            <p>Select your role to begin:</p>
+
+            <!-- User Role Selection -->
+            <div class='mb-3'>
+                <select id='userRole' class='form-select' required onchange='handleRoleSelection()'>
+                    <option value="">--Select Role--</option>
+                    <option value='customer'>Sign Up as Customer</option>
+                    <option value='mediator'>Sign Up as Mediator</option>
+                </select>
+                <div class='invalid-feedback'>Please select a role.</div>
+            </div>
+
+            <!-- Hidden redirect button -->
+            <button id='redirectButton' style='display:none;' onclick='redirectToSignup()'>Continue</button>
+
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registration-section" class="py-5">
+        <!-- Registration form will be dynamically loaded here based on selection -->
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 text-center">
+        <h2>What Our Users Say</h2>
+        <blockquote>"This platform has made resolving disputes so much easier!" - Jane D.</blockquote>
+        <blockquote>"I found the mediation process straightforward and effective." - John S.</blockquote>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta" class="py-5 bg-light text-center">
+        <h2>Ready to Get Started?</h2>
+        <p>Join us today and experience efficient dispute resolution!</p>
+        <a href="{% url 'signup' %}" class='btn btn-primary'>Sign Up Now</a>
+    </section>
+
+</main>
+
+<footer id='footer' class='footer bg-dark text-white py-4'>
+    <div class='container text-center'>
+        &copy; 2024 Valera. All Rights Reserved.
+        Designed by BootstrapMade.
+    </div>
+</footer>
+
+<a href="#" id='scroll-top' title='Scroll to top' style='display:none;'>↑</a>
+
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script>
+
+<script>
+// Function to handle user role selection
+function handleRoleSelection() {
+    const selectedRole = document.getElementById('userRole').value;
+
+    if (selectedRole) {
+        document.getElementById('redirectButton').style.display = 'block';
+    } else {
+        document.getElementById('redirectButton').style.display = 'none';
+    }
+}
+
+// Function to redirect based on user role
+function redirectToSignup() {
+    const selectedRole = document.getElementById('userRole').value;
+
+    if (selectedRole === 'customer') {
+        window.location.href = "{% url 'signup' %}"; // Redirect to customer signup page
+    } else if (selectedRole === 'mediator') {
+        window.location.href = "{% url 'arbitration' %}"; // Redirect to mediator signup page
+    }
+}
+</script>
+
+</body>
+</html>
