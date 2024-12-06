@@ -57,29 +57,20 @@
                 <div class="invalid-feedback">Please enter your password.</div>
             </div>
 
+            {% if error %}
+                <div class='alert alert-danger'>{{ error }}</div>
+            {% endif %}
+
             <button type="submit" class="btn btn-primary w-100">Login</button>
         </form>
-
-        <div id='loginError' class='alert alert-danger mt-3' style='display:none;'></div>
 
         <p class="mt-3 text-center">Don't have an account? <a href="{% url 'signup' %}">Sign up here</a></p>
     </div>
 </div>
 
 <script>
-// JavaScript for form handling
-document.getElementById('loginForm').onsubmit = function(event) {
-    event.preventDefault(); // Prevent default form submission
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    // Simulate login process (you can replace this with actual AJAX call)
-    if (username === "juma" && password === "juma") { // Example validation
-        window.location.href = "{% url 'customer_dashboard' %}"; // Redirect to home page on success
-    } else {
-        const loginError = document.getElementById('loginError');
-        loginError.style.display = 'block';
-        loginError.innerText = 'Invalid username or password.';
-    }
-};
+// Remove JavaScript for handling login; let Django handle form submission
 </script>
+
+</body>
+</html>

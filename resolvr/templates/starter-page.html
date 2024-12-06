@@ -8,19 +8,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
     <style>
         body {
             background-color: #f5f5f5; /* Light background */
+            background-image: url('https://images.pexels.com/photos/4427430/pexels-photo-4427430.jpeg'); /* Pexels image */
+            background-size: cover;
+            background-position: center;
         }
         .header {
-            background-color: #4B3D3D; /* Dark brown for header */
+            background-color: rgba(75, 61, 61, 0.8); /* Dark brown for header with transparency */
         }
         .page-title {
-            background-color: #8B5A2B; /* Premium brown color for title */
+            background-color: rgba(139, 90, 43, 0.8); /* Premium brown color for title with transparency */
         }
         .premium-container {
-            background-color: #D6CFC4; /* Light premium brown */
+            background-color: rgba(214, 207, 196, 0.9); /* Light premium brown with transparency */
             border-radius: 8px;
             padding: 30px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -32,6 +35,20 @@
         .btn-primary:hover {
             background-color: #5B3B31; /* Slightly darker on hover */
         }
+        .footer {
+            background-color: #571919; /* Burgundy background */
+            color: white;
+            padding: 40px 0;
+        }
+        .footer .sitename {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
@@ -39,7 +56,7 @@
 <header class="header d-flex align-items-center text-white fixed-top">
     <div class="container-fluid">
         <a href="#" class="logo d-flex align-items-center text-white text-decoration-none">
-            <h1 class="h4 mb-0">Valera</h1>
+            <h1 class="h4 mb-0">Resolvr</h1>
         </a>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -94,26 +111,38 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-5 text-center">
-        <h2>What Our Users Say</h2>
-        <blockquote>"This platform has made resolving disputes so much easier!" - Jane D.</blockquote>
-        <blockquote>"I found the mediation process straightforward and effective." - John S.</blockquote>
-    </section>
+
+
 
     <!-- Call to Action Section -->
     <section id="cta" class="py-5 bg-light text-center">
         <h2>Ready to Get Started?</h2>
         <p>Join us today and experience efficient dispute resolution!</p>
-        <a href="{% url 'signup' %}" class='btn btn-primary'>Sign Up Now</a>
     </section>
 
 </main>
 
-<footer id='footer' class='footer bg-dark text-white py-4'>
-    <div class='container text-center'>
-        &copy; 2024 Valera. All Rights Reserved.
-        Designed by BootstrapMade.
+<!-- Footer Section -->
+<footer id='footer' class='footer'>
+  <div class='container'>
+    <h3 class='sitename'>Resolvr</h3>
+    <p>Your trusted partner in efficient and fair arbitration services. We are committed to providing expert support for all your dispute resolution needs.</p>
+    <div class='social-links d-flex justify-content-center'>
+      <a href="#"><i class="bi bi-twitter-x"></i></a>
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+      <a href="#"><i class="bi bi-skype"></i></a>
+      <a href="#"><i class="bi bi-linkedin"></i></a>
     </div>
+    <div class='container'>
+      <div class='copyright'>
+        &copy; 2024 Resolvr. All Rights Reserved.
+      </div>
+      <div class='credits'>
+        Designed by Musima.
+      </div>
+    </div>
+  </div>
 </footer>
 
 <a href="#" id='scroll-top' title='Scroll to top' style='display:none;'>↑</a>

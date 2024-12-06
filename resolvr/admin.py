@@ -1,18 +1,55 @@
 from django.contrib import admin
-from .models import Case, UserProfile
+from .models import CustomUser, UserProfile, Case, Arbitrator, Customer
 
 
-@admin.register(Case)
-class CaseAdmin(admin.ModelAdmin):
-    list_display = ('title', 'created_by', 'status', 'created_at')  # Ensure 'status' is valid
-    list_filter = ('status', 'created_at')  # Ensure 'status' is valid
+class CustomUserAdmin(admin.ModelAdmin):
+    """Admin interface for CustomUser model."""
+    list_display = (
+        'username', 'email', 'phone_number', 'designation', 'role')  # Ensure these fields exist in CustomUser
+    search_fields = ('username', 'email')  # Add search functionality
+    list_filter = ('role',)  # Filter by role
 
 
-@admin.register(UserProfile)
+# Register the CustomUser model with its admin class
+admin.site.register(CustomUser, CustomUserAdmin)
+
+
 class UserProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'email', 'get_full_name')  # Replace with a method for full name
+    """Admin interface for UserProfile model."""
+    list_display = ('user', 'email')
+    search_fields = ('user__username', 'email')  # Search by username or email
 
-    def get_full_name(self, obj):
-        return f"{obj.user.first_name} {obj.user.last_name}"  # Assuming user is a ForeignKey
 
-    get_full_name.short_description = 'Full Name'  # Optional: Set a short description
+# Register the UserProfile model with its admin class
+admin.site.register(UserProfile, UserProfileAdmin)
+
+
+class CaseAdmin(admin.ModelAdmin):
+    """Admin interface for Case model."""
+    list_display = ('title', 'created_by', 'status')
+    search_fields = ('title', 'description')  # Add search functionality
+    list_filter = ('status',)  # Filter by status
+
+
+# Register the Case model with its admin class
+admin.site.register(Case, CaseAdmin)
+
+
+class ArbitratorAdmin(admin.ModelAdmin):
+    """Admin interface for Arbitrator model."""
+    list_display = ('user', 'qualifications', 'experience')
+    search_fields = ('user__username', 'qualifications')  # Search by username or qualifications
+
+
+# Register the Arbitrator model with its admin class
+admin.site.register(Arbitrator, ArbitratorAdmin)
+
+
+class CustomerAdmin(admin.ModelAdmin):
+    """Admin interface for Customer model."""
+    list_display = ('user',)  # Display user associated with the customer
+    search_fields = ('user__username',)  # Search by username
+
+
+# Register the Customer model with its admin class
+admin.site.register(Customer, CustomerAdmin)

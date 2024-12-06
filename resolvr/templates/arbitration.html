@@ -42,7 +42,7 @@
         <h2 class="signup-title text-center">Join as an Arbitrator</h2>
         <form id="arbitratorSignupForm" action="{% url 'arbitration' %}" method="POST" novalidate>
             {% csrf_token %}
-            
+            {{ form.as_p }}
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
                 <input type="text" class="form-control" id="username" name="username" required aria-describedby="usernameHelp">
